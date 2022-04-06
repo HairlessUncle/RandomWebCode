@@ -1,13 +1,16 @@
-			//php code, simulating the way how to use bootstrap Grid System to display records from db
+	//php code, simulating the way how to use bootstrap Grid System to display records from db
       //here design as 1 row 3 records max, the rest should still be displayed after O(n*n) 
       
-      $num = 10;
-			$rowNum = intval($num/3);
-			$i = 10;
-			for($i; $i>=3; $i-=3){
-				echo $i;
-				for($j=$i-1;$j>$i-4;--$j){//first round 9 ok, 8 ok, 7 ok, 6 no   (index num, indicating db retrived count(records))
-					echo $j.'_';
-				}
-			}
-			echo $i;
+  	$num = 10;
+	$rowNum = intval($num/3);
+	$i = 14;
+	for($i; $i>=3; $i-=3){
+		echo '['.$i.']';
+		for($j=$i-1;$j>$i-4;--$j){//9 ok, 8 ok, 7 ok, 6 no
+			echo $j.'_';
+		}
+	}
+
+	for($i-=1; $i!=-1; $i--){
+		echo '['.$i.']';
+	}
